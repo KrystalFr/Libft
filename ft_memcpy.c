@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 21:36:32 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/04 22:04:14 by kfrancoi         ###   ########.fr       */
+/*   Created: 2022/05/04 22:09:27 by kfrancoi          #+#    #+#             */
+/*   Updated: 2022/05/04 22:22:39 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*tab;
 	size_t	i;
 
-	if (s == NULL)
-		return (NULL);
-	tab = s;
 	i = 0;
 	while (i < n)
-		tab[i++] = c;
-	return (s);
+	{
+		((char *)dest)[i] = ((char *)src)[i];
+		i++;
+	}
+	return (dest);
 }
