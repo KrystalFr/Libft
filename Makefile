@@ -14,7 +14,8 @@ SRCS	=	ft_isalpha.c \
 			ft_putstr_fd.c \
 			ft_putnbr_fd.c \
 			ft_bzero.c \
-			ft_calloc.c
+			ft_calloc.c \
+			ft_memset.c
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -25,7 +26,7 @@ all: $(NAME)
 .c.o:
 	$(CC) -c $< -o $(<:.c=.o)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) libft.h
 	ar rcs $(NAME) $(OBJS)
 
 clean:

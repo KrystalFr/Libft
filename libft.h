@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:01:14 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/04 21:25:06 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/04 21:37:29 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_memset(void *s, int c, size_t n);
 #endif
