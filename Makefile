@@ -9,7 +9,9 @@ SRCS	=	ft_isalpha.c \
 			ft_isascii.c \
 			ft_isalnum.c \
 			ft_atoi.c \
-			ft_strlcpy.c 
+			ft_strlcpy.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c
 
 OBJS	=	$(SRCS:.c=.o)
 
