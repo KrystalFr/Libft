@@ -1,0 +1,34 @@
+NAME	=	libft.a
+
+SRCS	=	ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isprint.c \
+			ft_strlen.c \
+			ft_toupper.c \
+			ft_tolower.c \
+			ft_isascii.c \
+			ft_isalnum.c \
+			ft_atoi.c \
+			ft_strlcpy.c 
+
+OBJS	=	$(SRCS:.c=.o)
+
+CC		=	gcc -Wall -Wextra -Werror
+
+all: $(NAME)
+
+.c.o:
+	$(CC) -c $< -o $(<:.c=.o)
+
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+clean:
+	rm -f $(OBJS)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: clean all
+
+.PHONY: all clean fclean re
