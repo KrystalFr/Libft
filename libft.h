@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:01:14 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/07 00:07:36 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/07 00:37:48 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-char 	*ft_strdup(const char *s);
-char 	*ft_strnstr(const char	*big, const char *little, size_t len);
+char	*ft_strdup(const char *s);
+char	*ft_strnstr(const char	*big, const char *little, size_t len);
 #endif

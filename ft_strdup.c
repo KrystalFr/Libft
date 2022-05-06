@@ -6,11 +6,11 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 23:11:48 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/07 00:08:28 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/07 00:38:54 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*#include "libft.h"
 #include <stdlib.h>
 
 char *ft_strdup(const char *s)
@@ -25,4 +25,4 @@ char *ft_strdup(const char *s)
 
 	}
 
-}
+}*/

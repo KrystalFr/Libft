@@ -6,13 +6,13 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 23:58:57 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/07 00:07:44 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/07 00:39:27 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+/*#include <stddef.h>
 
 char 	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
 	
-}
+}*/
