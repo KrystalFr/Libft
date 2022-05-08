@@ -6,13 +6,28 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 23:58:57 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/07 00:39:27 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/08 09:15:17 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stddef.h>
+#include "libft.h"
 
-char 	*ft_strnstr(const char	*big, const char *little, size_t len)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-	
-}*/
+	size_t	i;
+	size_t	litlen;
+
+	i = 0;
+	litlen = ft_strlen(little);
+	if (len == 0)
+		return (NULL);
+	if (little[i] == '\0')
+		return ((char *)big);
+	while (big[i] && i < len - litlen)
+	{
+		if (ft_strncmp(&big[i], little, litlen) == 0)
+			return ((char *)&big[i]);
+		i++;
+	}
+	return (NULL);
+}
