@@ -1,6 +1,7 @@
 NAME	=	libft.a
+DYNAMIC	=	$(NAME:.a=.so)
 
-SRCS	=	ft_isalpha.c \
+SRC		=	ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isprint.c \
 			ft_strlen.c \
@@ -28,26 +29,34 @@ SRCS	=	ft_isalpha.c \
 			ft_strnstr.c \
 			ft_putendl_fd.c \
 			ft_striteri.c \
-			ft_strdup.c
+			ft_substr.c
 
-OBJS	=	$(SRCS:.c=.o)
+OBJ		=	$(SRC:.c=.o)
 
-CC		=	gcc -Wall -Wextra -Werror
+CC		=	gcc
+CFLAGS	=	-Wall -Wextra -Werror
 
 all: $(NAME)
 
-.c.o:
-	$(CC) -c $< -o $(<:.c=.o)
+so: $(DYNAMIC) clean
 
-$(NAME): $(OBJS) libft.h
-	ar rcs $(NAME) $(OBJS)
+.c.o:
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+$(DYNAMIC): $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	$(CC) -nostartfiles -shared -o libft.so $(OBJ)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f $(DYNAMIC)
 
-re: clean all
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all so clean fclean re

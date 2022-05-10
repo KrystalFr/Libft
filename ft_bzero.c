@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 17:23:54 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/04 21:18:45 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:52:56 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	*tab;
 
-	if (s == NULL)
-		return ;
 	tab = s;
 	while (n--)
 		tab[n] = 0;

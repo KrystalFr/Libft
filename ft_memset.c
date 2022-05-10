@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 21:36:32 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/04 22:04:14 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:52:26 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	char	*tab;
 	size_t	i;
 
-	if (s == NULL)
-		return (NULL);
 	tab = s;
 	i = 0;
 	while (i < n)
