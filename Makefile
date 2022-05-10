@@ -29,7 +29,9 @@ SRC		=	ft_isalpha.c \
 			ft_strnstr.c \
 			ft_putendl_fd.c \
 			ft_striteri.c \
-			ft_substr.c
+			ft_substr.c \
+			ft_strjoin.c \
+			ft_strtrim.c
 
 OBJ		=	$(SRC:.c=.o)
 
@@ -59,4 +61,8 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all so clean fclean re
+run: all
+	$(CC) main.c $(NAME) -o test
+	./test
+
+.PHONY: all so clean fclean re run

@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:01:14 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/10 13:50:24 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:57:49 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strdup(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strnstr(const char	*big, const char *little, size_t len);
 void	ft_bzero(void *s, size_t n);
