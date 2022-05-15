@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 23:58:57 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/15 23:06:48 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/16 01:28:39 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 	i = 0;
 	litlen = ft_strlen(little);
 	if (len == 0)
-		return (NULL);
+		return ((char *)&big[i]);
 	if (little[i] == '\0')
 		return ((char *)big);
 	while (big[i] && i < len - litlen)
