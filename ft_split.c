@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/13 23:16:01 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/16 00:01:59 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	**ft_split(char const *s, char c)
 	tab = malloc5((1000) * sizeof(char));
 	if (!tab)
 		return (NULL);
-	while (ft_strchr(s, c))
+	while (s)
 	{
-
+		ft_strchr(s, c)
 	}
 }
