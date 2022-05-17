@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:41:20 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/10 21:15:48 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/17 22:47:00 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	len;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	while (ft_strchr(set, s1[i]))
 		i++;
