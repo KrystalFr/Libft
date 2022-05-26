@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/26 07:08:45 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/26 07:24:54 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ unsigned int	count_c(char *s, char c)
 	return (count);
 }
 
-char	*start(char *s, char c)
+char	*starting_point(char *s, char c)
 {
 	size_t	i;
+
 	i = 0;
 	while (s[i])
 	{
@@ -43,25 +44,21 @@ char	*start(char *s, char c)
 	return (NULL);
 }
 
-size_t	gap(char *first, char *last)
+size_t	gap(char *s1, char *s2)
 {
-	size_t	diff;
-
-	diff = last - first;
-	return (diff);
+	return (s2 - s1);
 }
 
 void	loop(char *s, char c)
 {
 	char *tmp;
-	
-	while ((tmp = start(s, c)))
+
+	while ((tmp = starting_point(s, c)))
 	{
 		printf("%ld\n", gap(s, tmp));
 		s = tmp + 1;
 	}
 }
-
 /*char **ft_split(char const *s, char c)
 {
 
