@@ -51,8 +51,8 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 $(DYNAMIC): $(OBJ)
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	$(CC) -nostartfiles -shared -o libft.so $(OBJ)
+	$(CC) -fPIC $(CFLAGS) -c $(SRC)
+	$(CC) -shared -o libft.so $(OBJ)
 
 clean:
 	rm -f $(OBJ)

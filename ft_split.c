@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/23 06:47:31 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/26 05:49:11 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,61 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char **ft_split(char const *s, char c)
+unsigned int	count_c(char *s, char c)
 {
-	size_t count;
-	char **tab;
+	size_t	count;
+	size_t	i;
 
+	count = 0;
+	i = 0;
+	while (s[i])
 	{
-		size_t i;
-
-		i = 0;
-		count = 1;
-		while (s[i])
-		{
-			if (s[i] == c)
-				count++;
-			i++;
-		}
+		if (s[i] == c)
+			count++;
+		i++;
 	}
-
-	tab = malloc((count + 1) * sizeof(char *));
-	if (!tab)
-		return (NULL);
-	
-	return (tab);
+	return (count);
 }
 
-int main()
+char	*start(char *s, char c)
 {
-	char **tab = ft_split("Hello World", ' ');
-	size_t index = 0;
-	while (tab[index])
+	size_t	i;
+	i = 0;
+	while (s[i])
 	{
-		printf("tab[%zu] = %s\n", index, tab[index]);
-		index++;
+		if (s[i] == c)
+			return (s + i);
+		i++;
 	}
-	return (0);
+	return (NULL);
+}
+
+size_t	gap(char *first, char *last)
+{
+	size_t	diff;
+
+	diff = last - first;
+	return (diff);
+}
+
+void	loop(char *s, char c)
+{
+	char *tmp;
+	
+}
+
+/*char **ft_split(char const *s, char c)
+{
+
+}*/
+
+int	main()
+{
+  char *str = "Hello World";
+  char c = ' ';
+
+  char *ret = start(str, c);
+  size_t len = gap(str, ret);
+  printf("%zu\n", len);
+  return 0;
 }
