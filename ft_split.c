@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/26 05:53:09 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/26 07:08:45 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ void	loop(char *s, char c)
 {
 	char *tmp;
 	
+	while ((tmp = start(s, c)))
+	{
+		printf("%ld\n", gap(s, tmp));
+		s = tmp + 1;
+	}
 }
 
 /*char **ft_split(char const *s, char c)
@@ -64,8 +69,8 @@ void	loop(char *s, char c)
 
 int main()
 {
-  char *str = "bonsoir coucou salut";
-  char c = ' ';
+  char *str = "bonsoir coucou salut pute chienne flote";
+  char c = 'o';
 
   loop(str, c);
   return 0;
