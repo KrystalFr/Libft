@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/26 05:49:11 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/26 05:53:09 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,11 @@ void	loop(char *s, char c)
 
 }*/
 
-int	main()
+int main()
 {
-  char *str = "Hello World";
+  char *str = "bonsoir coucou salut";
   char c = ' ';
 
-  char *ret = start(str, c);
-  size_t len = gap(str, ret);
-  printf("%zu\n", len);
+  loop(str, c);
   return 0;
 }
