@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/26 07:24:54 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/30 18:47:36 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-unsigned int	count_c(char *s, char c)
+unsigned int	count_c(const char *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -30,7 +30,7 @@ unsigned int	count_c(char *s, char c)
 	return (count);
 }
 
-char	*starting_point(char *s, char c)
+const char	*start(const char *s, char c)
 {
 	size_t	i;
 
@@ -44,31 +44,44 @@ char	*starting_point(char *s, char c)
 	return (NULL);
 }
 
-size_t	gap(char *s1, char *s2)
+size_t	gap(const char *s1, const char *s2)
 {
 	return (s2 - s1);
 }
 
-void	loop(char *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char *tmp;
+	char		**tab;
+	size_t		count;
+	size_t		i;
+	const char	*tmp;
 
-	while ((tmp = starting_point(s, c)))
+	count = count_c(s, c);
+	tab = malloc((count + 2) * sizeof(char *));
+	if (!tab)
+		return (NULL);
+	i = 0;
+	while ((tmp = start(s, c)))
 	{
-		printf("%ld\n", gap(s, tmp));
+		tab[i] = ft_substr(s, 0, gap(s, tmp));
 		s = tmp + 1;
+		i++;
 	}
+	return (tab);
 }
-/*char **ft_split(char const *s, char c)
-{
-
-}*/
 
 int main()
 {
-  char *str = "bonsoir coucou salut pute chienne flote";
+  char *s = "bonsoir coucou salut pute chienne flote";
   char c = 'o';
+  char **tab = ft_split(s, c);
+  size_t	i;
 
-  loop(str, c);
+  i = 0;
+  while (tab[i])
+  {
+	printf("%s\n", tab[i]);
+	i++;
+  }
   return 0;
 }
