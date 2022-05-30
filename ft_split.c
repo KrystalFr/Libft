@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/30 18:47:36 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/30 22:09:27 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,19 +61,30 @@ char	**ft_split(char const *s, char c)
 	if (!tab)
 		return (NULL);
 	i = 0;
-	while ((tmp = start(s, c)))
+	while ((tmp[i]))
 	{
-		tab[i] = ft_substr(s, 0, gap(s, tmp));
+		tmp = start(s, c);
+		if (gap(s, tmp))
+		{
+			tab[i] = ft_substr(s, 0, gap(s, tmp));
+			i++;
+		}
 		s = tmp + 1;
-		i++;
 	}
+	if (s[i] != '\0')
+	{
+		tab[i] = ft_strdup(s);
+		tab[i + 1] = '\0';
+	}
+	else
+		tab[i] = '\0';
 	return (tab);
 }
 
 int main()
 {
-  char *s = "bonsoir coucou salut pute chienne flote";
-  char c = 'o';
+  char *s = "      bonsoir coucou              salut pute chienne flote     ";
+  char c = ' ';
   char **tab = ft_split(s, c);
   size_t	i;
 

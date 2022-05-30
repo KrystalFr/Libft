@@ -6,7 +6,7 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 09:01:14 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/22 22:48:38 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/05/30 21:01:20 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char	*big, const char *little, size_t len);
+char	**ft_split(char const *s, char c);
 void	ft_bzero(void *s, size_t n);
 void	ft_putnbr_fd(int nb, int fd);
 void	ft_putchar_fd(char c, int fd);
