@@ -6,12 +6,13 @@
 /*   By: kfrancoi <kfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:02:47 by kfrancoi          #+#    #+#             */
-/*   Updated: 2022/05/31 00:08:04 by kfrancoi         ###   ########.fr       */
+/*   Updated: 2022/06/01 21:28:15 by kfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 unsigned int	count_c(const char *s, char c)
 {
@@ -20,9 +21,11 @@ unsigned int	count_c(const char *s, char c)
 
 	count = 0;
 	i = 0;
+	while (s[i] == c)
+		i++;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 			count++;
 		i++;
 	}
@@ -54,12 +57,14 @@ char	**ft_split(char const *s, char c)
 	size_t		i;
 	const char	*tmp;
 
+	if (!s)
+		return (NULL);
 	tab = malloc((count_c(s, c) + 2) * sizeof(char *));
 	if (!tab)
 		return (NULL);
 	i = 0;
 	tmp = start (s, c);
-	while ((tmp))
+	while (tmp)
 	{
 		if (gap(s, tmp))
 			tab[i++] = ft_substr(s, 0, gap(s, tmp));
@@ -67,11 +72,7 @@ char	**ft_split(char const *s, char c)
 		tmp = start(s, c);
 	}
 	if (*s != '\0')
-	{
-		tab[i] = ft_strdup(s);
-		tab[i + 1] = 0;
-	}
-	else
-		tab[i] = 0;
+		tab[i++] = ft_strdup(s);
+	tab[i] = 0;
 	return (tab);
 }
