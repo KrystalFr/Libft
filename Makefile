@@ -6,7 +6,7 @@
 #    By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 21:17:57 by krfranco          #+#    #+#              #
-#    Updated: 2023/11/06 22:07:48 by krfranco         ###   ########.fr        #
+#    Updated: 2023/11/07 00:39:56 by krfranco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,9 @@ SRCS	=	ft_isalnum.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_strlen.c \
+			ft_tolower.c \
+			ft_toupper.c \
 
 OBJS	=	${SRCS:.c=.o}
 CC		=	cc
