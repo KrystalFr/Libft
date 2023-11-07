@@ -6,7 +6,7 @@
 #    By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 21:17:57 by krfranco          #+#    #+#              #
-#    Updated: 2023/11/07 00:55:22 by krfranco         ###   ########.fr        #
+#    Updated: 2023/11/07 17:14:10 by krfranco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ SRCS	=	ft_isalnum.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_atoi.c \
+			ft_strchr.c \
+			ft_strrchr.c \
 
 OBJS	=	${SRCS:.c=.o}
 CC		=	cc
