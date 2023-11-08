@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 23:07:13 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/08 00:25:09 by krfranco         ###   ########.fr       */
+/*   Created: 2023/11/07 23:28:33 by krfranco          #+#    #+#             */
+/*   Updated: 2023/11/08 03:03:14 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*tab;
+	char	*sub;
 
-	i = 0;
-	tab = malloc((ft_strlen(src) + 1) * sizeof(char));
-	if (!tab)
+	if (!s)
 		return (NULL);
-	while (src[i])
-	{
-		tab[i] = src[i];
-		i++;
-	}
-	tab[i] = '\0';
-	return (tab);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	sub = malloc((len + 1) * sizeof(char));
+	if (!sub)
+		return (NULL);
+	s += start;
+	ft_strlcpy(sub, s, len + 1);
+	return (sub);
 }
+

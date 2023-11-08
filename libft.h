@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:00:57 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/07 23:16:01 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/08 03:08:32 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ void	*ft_memmove(void *dest, const void *src, size_t size);
 char	*ft_strdup(const char *src);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 #endif
