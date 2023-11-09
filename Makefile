@@ -6,7 +6,7 @@
 #    By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 21:17:57 by krfranco          #+#    #+#              #
-#    Updated: 2023/11/09 16:38:28 by krfranco         ###   ########.fr        #
+#    Updated: 2023/11/09 18:21:28 by krfranco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,3 +39,7 @@ fclean: clean
 		${RM} ${NAME}
 
 re: fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:49:59 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/09 15:50:39 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/09 18:53:16 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,23 +55,22 @@ char	**ft_split(char const *s, char c)
 	int		gap;
 	char	**tab;
 
+	if (!s)
+		return (NULL);
 	tab = malloc((ft_count(s, c) + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
-	j = 0;
+	j = -1;
 	i = 0;
-	while (j < ft_count(s, c))
+	while (++j < ft_count(s, c))
 	{
 		gap = 0;
 		while (s[i] == c)
 			i++;
-		while (s[i] != c && s[i])
-		{
+		i--;
+		while (s[++i] != c && s[i])
 			gap++;
-			i++;
-		}
 		tab[j] = ft_strndup((char *)&s[i - gap], gap);
-		j++;
 	}
 	tab[j] = 0;
 	return (tab);

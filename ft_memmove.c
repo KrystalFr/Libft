@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 22:26:52 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/09 18:04:19 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:42:53 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t size)
 {
-	if (dest == NULL || src == NULL)
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	if (dest < src)
 		ft_memcpy(dest, src, size);

@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 22:37:36 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/09 17:23:42 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:40:07 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t size)
 {
-	size_t		i;
-	const char	*p1;
-	const char	*p2;
+	size_t				i;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 
 	p1 = ptr1;
 	p2 = ptr2;
