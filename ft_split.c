@@ -6,13 +6,13 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:49:59 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/09 13:55:45 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:50:39 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(char const *str, char c)
+static int	ft_count(char const *str, char c)
 {
 	int	i;
 	int	count;
