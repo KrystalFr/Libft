@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:11:45 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/09 15:02:33 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/09 18:06:54 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i])
 	{
-		tab[i] = (*f)(s[i]);
+		tab[i] = (*f)(i, s[i]);
 		i++;
 	}
-	tab[i] '\0';
+	tab[i] = '\0';
 	return (tab);
 }
