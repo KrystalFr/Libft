@@ -1,27 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 16:44:59 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/08 15:42:18 by krfranco         ###   ########.fr       */
+/*   Created: 2023/11/09 14:11:52 by krfranco          #+#    #+#             */
+/*   Updated: 2023/11/09 14:55:00 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_count(int n)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	while (str[i] || !c)
+	count = 0;
+	if (n <= 0)
+		count++;
+	while (n)
 	{
-		if (str[i] == c)
-			return ((char *)&str[i]);
-		i++;
+		n /= 10;
+		count++;
 	}
-	return (NULL);
+	return (count);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*tab;
+	int		i;
+
+	i = ft_count(n);
+	tab = malloc((ft_count(n) + 1) * sizeof(char *));
+	if (!tab)
+		return (NULL);
+	if (n == 0)
+		tab[0] = '0';
+	if (n < 0)
+	{
+		tab[0] = '-';
+		n *= -1;
+	}
+	tab[i] = '\0';
+	while (n)
+	{
+		i--;
+		tab[i] = n % 10 + '0';
+		n /= 10;
+	}
+	return (tab);
 }
