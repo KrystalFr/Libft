@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 23:28:33 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/08 03:03:14 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:42:46 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 
+	sub = NULL;
 	if (!s)
 		return (NULL);
 	if (start > ft_strlen(s))

@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:44:33 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/09 19:17:40 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:04:44 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	len;
 
 	i = 0;
-	if (!size)
+	if (!size && !src)
 		return (0);
 	len = ft_strlen(dest);
 	if (len >= size)
