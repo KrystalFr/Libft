@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 00:47:44 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/07 00:58:07 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:55:00 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	ft_atoi(const char *str)
 	neg = 1;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
-
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')

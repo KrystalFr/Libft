@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:44:59 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/14 15:50:00 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:03:49 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (str[i] || !c)
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return ((char *)&str[i]);
 		i++;
 	}

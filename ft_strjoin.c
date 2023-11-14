@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 03:07:30 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/08 14:52:36 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/14 17:38:59 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(str, s2, ft_strlen(s1) + ft_strlen(s2) + 1);
 	return (str);
 }
-
