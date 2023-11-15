@@ -6,7 +6,7 @@
 /*   By: krfranco <krfranco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:00:57 by krfranco          #+#    #+#             */
-/*   Updated: 2023/11/14 17:44:37 by krfranco         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:29:37 by krfranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <string.h>
 # include <stdint.h>
 
 int		ft_isalpha(int c);
